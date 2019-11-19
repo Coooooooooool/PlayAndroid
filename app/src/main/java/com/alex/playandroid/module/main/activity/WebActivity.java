@@ -92,16 +92,16 @@ public class WebActivity extends BaseActivity {
 
     @OnClick(R.id.fab)
     public void onViewClicked() {
-//        new ShareAction(this)
-//                .setPlatform(SHARE_MEDIA.WEIXIN)//传入平台
-//                .withText("hello")//分享内容
-//                .setCallback(umShareListener)//回调监听器
-//                .share();
         new ShareAction(this)
-                .withText("hello")
-                .setDisplayList(SHARE_MEDIA.SINA,SHARE_MEDIA.QQ,SHARE_MEDIA.WEIXIN,SHARE_MEDIA.WEIXIN_FAVORITE,SHARE_MEDIA.WEIXIN_CIRCLE,SHARE_MEDIA.EMAIL,SHARE_MEDIA.SMS)
-                .setCallback(umShareListener)
-                .open();
+                .setPlatform(SHARE_MEDIA.WEIXIN)//传入平台
+                .withText("hello")//分享内容
+                .setCallback(umShareListener)//回调监听器
+                .share();
+//        new ShareAction(this)
+//                .withText("hello")
+//                .setDisplayList(SHARE_MEDIA.SINA,SHARE_MEDIA.QQ,SHARE_MEDIA.WEIXIN,SHARE_MEDIA.WEIXIN_FAVORITE,SHARE_MEDIA.WEIXIN_CIRCLE,SHARE_MEDIA.EMAIL,SHARE_MEDIA.SMS)
+//                .setCallback(umShareListener)
+//                .open();
     }
 
     UMShareListener umShareListener = new UMShareListener() {
