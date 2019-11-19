@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".module.main.activity.SettingActivity">
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        titlebar:fillStatusBar="true"
+        titlebar:statusBarColor="@color/colorPrimary"
+        titlebar:statusBarMode="light"
+        titlebar:titleBarColor="@color/colorPrimary"
+        app:leftType="textView"
+        app:leftDrawable="@mipmap/icon_back"
+        app:leftTextColor="@android:color/white"
+        app:leftTextSize="@dimen/sp_18"
+        app:leftText="@string/setting"
+        app:leftDrawablePadding="20dp"
+        app:showBottomLine="false"/>
+
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@drawable/selector_login_button"
+        android:text="@string/exit_logged"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

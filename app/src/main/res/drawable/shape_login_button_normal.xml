@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<solid android:color="@color/colorPrimary"/>-->
+    <!--<stroke android:color="@color/white" android:width="@dimen/dp_8" android:dashGap="@dimen/dp_1" android:dashWidth="@dimen/dp_16"/>-->
+    <corners android:radius="@dimen/dp_16"/>
+    <gradient  android:centerColor="@color/basic_btn_center_bg_normal"
+        android:endColor="@color/basic_btn_end_bg_normal"
+        android:startColor="@color/basic_btn_start_bg_normal"
+        android:angle="360"
+        android:gradientRadius="@dimen/dp_20"
+        android:type="linear"/>
+
+</shape>

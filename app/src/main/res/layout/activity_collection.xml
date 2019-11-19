@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".module.mine.activity.CollectionActivity">
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        titlebar:fillStatusBar="true"
+        titlebar:statusBarColor="@color/colorPrimary"
+        titlebar:statusBarMode="light"
+        titlebar:titleBarColor="@color/colorPrimary"
+        app:leftType="textView"
+        app:leftDrawable="@mipmap/icon_back"
+        app:leftTextColor="@android:color/white"
+        app:leftTextSize="@dimen/sp_18"
+        app:leftText="@string/my_collection"
+        app:leftDrawablePadding="20dp"
+        app:showBottomLine="false"/>
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/mi"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+
+
+</LinearLayout>

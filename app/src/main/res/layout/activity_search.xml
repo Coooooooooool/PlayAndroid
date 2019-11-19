@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.main.activity.SearchActivity">
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:centerSearchEditable="true"
+        app:centerType="searchView"
+        app:leftImageResource="@mipmap/icon_back"
+        app:leftType="imageButton"
+        app:rightImageResource="@mipmap/icon_search"
+        app:rightType="imageButton"
+        app:showBottomLine="false"
+        titlebar:fillStatusBar="true"
+        titlebar:statusBarColor="@color/colorPrimary"
+        titlebar:statusBarMode="light"
+        titlebar:titleBarColor="@color/colorPrimary" />
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_hot_keys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebar"
+        android:padding="@dimen/dp_16"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hotkey"
+            android:textColor="@color/colorPrimary"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_hot_keys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem = "@layout/rv_item_search_hot"
+            tools:itemCount = "9"
+            tools:spanCount = "3"
+            tools:layoutManager = "GridLayoutManager"/>
+
+    </LinearLayout>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/layout_refresh"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titlebar">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layoutManager = "LinearLayoutManager"
+            tools:listitem = "@layout/rv_item_article" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</RelativeLayout>
